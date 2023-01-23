@@ -1,0 +1,13 @@
+RewriteEngine on
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$
+
+RewriteCond %{THE_REQUEST} ^.*/index.php
+RewriteRule ^(.*)index.php$ /oliveOil/ [R=301,L]
+
+ErrorDocument 404 http://$2/oliveOil/404
