@@ -1,12 +1,13 @@
 <?php
+//You Must Design Your Own Database
 class connection{
 	public $db;
 	public function __construct(){
 		$host = "localhost";
-		$port = "5432";
-		$dbname = "oliveoil";
-		$user = "erensekkeli";
-		$pass = "01276346";
+		$port = "****";
+		$dbname = "****";
+		$user = "****";
+		$pass = "****";
 		$dsn = "pgsql:host=$host;port=$port;dbname=$dbname;";
 		try {
 			$this->db=new PDO($dsn, $user, $pass);
